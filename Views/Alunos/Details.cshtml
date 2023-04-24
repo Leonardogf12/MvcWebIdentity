@@ -1,0 +1,42 @@
+﻿@model MvcWebIdentity.Entities.Aluno
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Aluno</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ALU_NOME)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ALU_NOME)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ALU_EMAIL)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ALU_EMAIL)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ALU_IDADE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ALU_IDADE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ALU_CURSO)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ALU_CURSO)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ALUNOID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

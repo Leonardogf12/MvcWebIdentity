@@ -1,0 +1,49 @@
+﻿@model MvcWebIdentity.Entities.Aluno
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Aluno</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ALUNOID" />
+            <div class="form-group">
+                <label asp-for="ALU_NOME" class="control-label"></label>
+                <input asp-for="ALU_NOME" class="form-control" />
+                <span asp-validation-for="ALU_NOME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ALU_EMAIL" class="control-label"></label>
+                <input asp-for="ALU_EMAIL" class="form-control" />
+                <span asp-validation-for="ALU_EMAIL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ALU_IDADE" class="control-label"></label>
+                <input asp-for="ALU_IDADE" class="form-control" />
+                <span asp-validation-for="ALU_IDADE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ALU_CURSO" class="control-label"></label>
+                <input asp-for="ALU_CURSO" class="form-control" />
+                <span asp-validation-for="ALU_CURSO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

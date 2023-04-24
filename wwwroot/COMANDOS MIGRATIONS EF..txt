@@ -1,0 +1,6 @@
+
+- Comando para criar a migração com as tabelas e colunas.
+  > dotnet ef migrations add Inicial --project NomeDoProjeto -s NomeDaAplicacao --verbose
+
+- Comando para criar o banco de dados com EF MIGRATION.
+  > dotnet ef database update --project NomeDoProjeto -s NomeDaAplicacao --verbose
