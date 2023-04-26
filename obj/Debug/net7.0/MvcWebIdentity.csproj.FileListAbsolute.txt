@@ -275,3 +275,13 @@ D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\runtimes\win\lib\net6
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\EntityFramework.SqlServer.dll
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\EntityFramework.dll
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Microsoft.AspNet.Identity.Core.dll
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
