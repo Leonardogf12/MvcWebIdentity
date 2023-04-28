@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MvcWebIdentity.Context;
+using MvcWebIdentity.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,11 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.SlidingExpiration = true;
     });
 
+
+//*REGISTRO DO SERVICO DAS ROLES.
+builder.Services.AddScoped<ICriaRegrasUsuario, CriaRegasUsuario>();
+
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -48,6 +54,10 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+//*APOS O METODO UserRouting() VAMOS INVOCAR O METODO CriarPerfisUsuarioAsync() COM A INSTACIA DE app.
+await CriarPerfisUsuarioAsync(app);
+
+
 //*AUTENTICACAO P USO DO IDENTITY.
 app.UseAuthentication();
 
@@ -58,3 +68,16 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+//*METODOS PARA CRIACAO DOS PERFIS E SUAS ROLES.
+async Task CriarPerfisUsuarioAsync(WebApplication app)
+{
+    var scopedFactory = app.Services.GetService<IServiceScopeFactory>();
+
+    using (var scope = scopedFactory.CreateScope())
+    {
+        var service = scope.ServiceProvider.GetService<ICriaRegrasUsuario>();
+        await service.CriaRegrasAsync();
+        await service.CriaUsuarioComRegraAsync();
+    }
+}

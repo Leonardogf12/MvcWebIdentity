@@ -21,7 +21,7 @@ namespace MvcWebIdentity.Controllers
             _context = context;
         }
 
-        // GET: Alunos
+        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
               return _context.Alunos != null ? 
@@ -29,7 +29,7 @@ namespace MvcWebIdentity.Controllers
                           Problem("Entity set 'AppDbContext.Alunos'  is null.");
         }
 
-        // GET: Alunos/Details/5
+        [Authorize(Roles = "User, Admin, Gerente")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Alunos == null)
@@ -47,7 +47,7 @@ namespace MvcWebIdentity.Controllers
             return View(aluno);
         }
 
-        // GET: Alunos/Create
+        [Authorize(Roles = "User, Admin, Gerente")]
         public IActionResult Create()
         {
             return View();
@@ -69,7 +69,7 @@ namespace MvcWebIdentity.Controllers
             return View(aluno);
         }
 
-        // GET: Alunos/Edit/5
+        [Authorize(Roles = "User, Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Alunos == null)
@@ -120,7 +120,7 @@ namespace MvcWebIdentity.Controllers
             return View(aluno);
         }
 
-        // GET: Alunos/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Alunos == null)
