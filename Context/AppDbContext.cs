@@ -1,5 +1,4 @@
-﻿//using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MvcWebIdentity.Entities;
 

@@ -72,7 +72,7 @@ namespace MvcWebIdentity.Services
                 IdentityResult result = await _userManager.CreateAsync(user, "Nemsei@2023");
 
                 //*SE O USUARIO FOI CRIADO ENTAO ATRIBUI A UMA ROLE.
-                if (!result.Succeeded)
+                if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(user, "User");
                 }
@@ -92,7 +92,7 @@ namespace MvcWebIdentity.Services
                 IdentityResult result = await _userManager.CreateAsync(user, "Nemsei@2023");
 
                 //*SE O USUARIO FOI CRIADO ENTAO ATRIBUI A UMA ROLE.
-                if (!result.Succeeded)
+                if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(user, "Admin");
                 }
@@ -112,7 +112,7 @@ namespace MvcWebIdentity.Services
                 IdentityResult result = await _userManager.CreateAsync(user, "Nemsei@2023");
 
                 //*SE O USUARIO FOI CRIADO ENTAO ATRIBUI A UMA ROLE.
-                if (!result.Succeeded)
+                if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(user, "Gerente");
                 }

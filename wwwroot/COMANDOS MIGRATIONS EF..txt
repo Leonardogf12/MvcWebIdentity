@@ -5,5 +5,5 @@
 - Comando para criar o banco de dados com EF MIGRATION.
   > dotnet ef database update --project NomeDoProjeto -s NomeDaAplicacao --verbose
 
-- Comando usado apos a implementacao do Identity para que o migration recoheca
+- Comando usado apos a implementacao do Identity para que o migration o recoheca
   > dotnet ef migrations add addIdentity --project MvcWebIdentity -s MvcWebIdentity --verbose

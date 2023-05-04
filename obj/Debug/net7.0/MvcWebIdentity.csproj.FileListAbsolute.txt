@@ -8,11 +8,7 @@ D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\MvcWebIdentity.dll
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\MvcWebIdentity.pdb
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Azure.Core.dll
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Azure.Identity.dll
-D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\EntityFramework.SqlServer.dll
-D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\EntityFramework.dll
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Humanizer.dll
-D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Microsoft.AspNet.Identity.Core.dll
-D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Microsoft.AspNet.Identity.EntityFramework.dll
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

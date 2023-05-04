@@ -10,6 +10,11 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionStringMySql = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDbContext>(x => x.UseMySql(connectionStringMySql, ServerVersion.Parse("8.0.29")));
 
+//*CONEXAO COM BANCO SQLSERVER
+//var connectionStringSqlServer = builder.Configuration.GetConnectionString("DefaultConnection");
+//builder.Services.AddDbContext<AppDbContext>(options =>
+//options.UseSqlServer(connectionStringSqlServer));
+
 //*IDENTITY.
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>();
@@ -17,7 +22,7 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
 //*DEFINE AS CONFIGURACOES DA COMPLEXIDADE DA SENHA.
 builder.Services.Configure<IdentityOptions>(options =>
 {
-    options.Password.RequiredLength = 10;
+    options.Password.RequiredLength = 8;
     options.Password.RequiredUniqueChars = 1;
     options.Password.RequireNonAlphanumeric = false;
 });
