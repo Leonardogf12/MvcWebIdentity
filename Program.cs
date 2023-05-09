@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MvcWebIdentity.Context;
@@ -67,6 +68,13 @@ await CriarPerfisUsuarioAsync(app);
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+//*ESTE MAPEAMENTO INDICA QUE ESTOU TRABALHANDO COM AREA NO MVC.
+app.MapControllerRoute(
+    name: "MinhaArea",
+    pattern: "{area:exists}/{controller=Admin}/{action=Index}/{id?}"
+    );
+
 
 app.MapControllerRoute(
     name: "default",

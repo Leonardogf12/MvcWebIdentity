@@ -1,3 +1,11 @@
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.csproj.AssemblyReference.cache
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.AssemblyInfoInputs.cache
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.AssemblyInfo.cs
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.csproj.CoreCompileInputs.cache
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.MvcApplicationPartsAssemblyInfo.cache
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.RazorAssemblyInfo.cache
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.RazorAssemblyInfo.cs
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\appsettings.Development.json
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\appsettings.json
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\MvcWebIdentity.staticwebassets.runtime.json
@@ -257,14 +265,6 @@ D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\runtimes\win\lib\net6
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.csproj.AssemblyReference.cache
-D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.GeneratedMSBuildEditorConfig.editorconfig
-D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.AssemblyInfoInputs.cache
-D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.AssemblyInfo.cs
-D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.csproj.CoreCompileInputs.cache
-D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.MvcApplicationPartsAssemblyInfo.cache
-D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.RazorAssemblyInfo.cache
-D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.RazorAssemblyInfo.cs
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\staticwebassets\msbuild.MvcWebIdentity.Microsoft.AspNetCore.StaticWebAssets.props
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\staticwebassets\msbuild.build.MvcWebIdentity.props
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MvcWebIdentity.props
@@ -272,6 +272,7 @@ D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\staticwebassets\msbui
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\staticwebassets.pack.json
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\staticwebassets.build.json
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\staticwebassets.development.json
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\scopedcss\bundle\MvcWebIdentity.styles.css
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\scopedcss\projectbundle\MvcWebIdentity.bundle.scp.css

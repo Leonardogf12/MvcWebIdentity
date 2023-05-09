@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MvcWebIdentity</title>
+    <title>@ViewData["Title"] - Admin</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MvcWebIdentity.styles.css" asp-append-version="true" />
@@ -18,17 +18,21 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark fw-bold" asp-area="Admin" asp-controller="Admin" asp-action="Index">Admin</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Alunos" asp-action="Index">Alunos</a>
+                            <a class="nav-link text-dark" asp-area="Admin" asp-controller="AdminRoler" asp-action="Index">Gerenciar Regras</a>
                         </li>
-                        <partial name="_AdminLogin.cshtml" />
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="Admin" asp-controller="AdminUsuarios" asp-action="Index">Gerenciar Usuarios</a>
+                        </li>
                     </ul>
-                        <partial name="_LoginPartial.cshtml" />
+
                 </div>
+            </div>
             </div>
         </nav>
     </header>
