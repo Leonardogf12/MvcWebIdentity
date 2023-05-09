@@ -51,10 +51,7 @@ public class AdminRolerController : Controller
 
         foreach (IdentityUser user in userManager.Users)
         {
-            verificar o porque nao esta adicionando na minha lista abaixo.
-
-            algun problema com este IF ternario.
-
+            
             var list = await userManager.IsInRoleAsync(user, role.Name) 
                                                 ? membros : semMembros;
 
