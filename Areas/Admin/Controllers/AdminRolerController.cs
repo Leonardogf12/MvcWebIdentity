@@ -48,22 +48,30 @@ public class AdminRolerController : Controller
 
         List<IdentityUser> membros = new List<IdentityUser>();
         List<IdentityUser> semMembros = new List<IdentityUser>();
+       
+        //List<IdentityUser> list = new List<IdentityUser>();
 
-        foreach (IdentityUser user in userManager.Users)
+        if(role != null)
         {
-            
-            var list = await userManager.IsInRoleAsync(user, role.Name) 
-                                                ? membros : semMembros;
+            foreach (IdentityUser user in userManager.Users.ToList())
+            {                
+                var list = await userManager.IsInRoleAsync(user, role.Name) ? membros : semMembros;
 
-            list.Add(user);
+                list.Add(user);
+            }
+
+            return View(new RoleEdit
+            {
+                Role = role,
+                Membros = membros,
+                SemMembros = semMembros
+            });
         }
-
-        return View(new RoleEdit
+        else
         {
-            Role = role,
-            Membros = membros,
-            SemMembros = semMembros
-        });
+            return View();
+        }
+       
     }
 
     [HttpPost]
