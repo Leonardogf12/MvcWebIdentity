@@ -77,17 +77,23 @@ public class AdminRolerController : Controller
     [HttpPost]
     public async Task<IActionResult> Update(RoleModification model)
     {
-        IdentityResult Result;
+        IdentityResult Result = new IdentityResult();
 
+        
         if (ModelState.IsValid)
         {
             //*GERENCIA QUANDO VAI INCLUIR O USUSARIO
             foreach (string userId in model.AddIds ?? new string[] { })
             {
-                IdentityUser user = await userManager.FindByIdAsync(userId);
+                
+                var user = await userManager.FindByIdAsync(userId);
+               
                 if (user != null)
                 {
-                    Result = await userManager.AddToRoleAsync(user, model.NameRole);
+                    //*AJUSTADO PARA BUSCA NOME DA ROLE EM QUESTAO.
+                    IdentityRole role = await roleManager.FindByIdAsync(model.RoleId);
+                  
+                    Result = await userManager.AddToRoleAsync(user, role.Name);
 
                     if (!Result.Succeeded)
                         Errors(Result);

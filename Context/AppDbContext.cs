@@ -2,16 +2,16 @@
 using Microsoft.EntityFrameworkCore;
 using MvcWebIdentity.Entities;
 
-namespace MvcWebIdentity.Context
+namespace MvcWebIdentity.Context;
+
+public class AppDbContext : IdentityDbContext
 {
-    public class AppDbContext : IdentityDbContext
-    {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-        {            
-        }
-
-        public DbSet<Aluno> Alunos { get; set; }
-
-        
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    {            
     }
+
+    public DbSet<Aluno> Alunos { get; set; }
+    public DbSet<Produto> Produtos { get; set; }
+
+    
 }
