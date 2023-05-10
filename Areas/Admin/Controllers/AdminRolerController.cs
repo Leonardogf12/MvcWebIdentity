@@ -82,17 +82,16 @@ public class AdminRolerController : Controller
         
         if (ModelState.IsValid)
         {
+            //*AJUSTADO PARA BUSCAR NOME DA ROLE EM QUESTAO.
+            IdentityRole role = await roleManager.FindByIdAsync(model.RoleId);
+
             //*GERENCIA QUANDO VAI INCLUIR O USUSARIO
             foreach (string userId in model.AddIds ?? new string[] { })
-            {
-                
+            {                
                 var user = await userManager.FindByIdAsync(userId);
                
                 if (user != null)
-                {
-                    //*AJUSTADO PARA BUSCA NOME DA ROLE EM QUESTAO.
-                    IdentityRole role = await roleManager.FindByIdAsync(model.RoleId);
-                  
+                {                                      
                     Result = await userManager.AddToRoleAsync(user, role.Name);
 
                     if (!Result.Succeeded)
@@ -107,7 +106,7 @@ public class AdminRolerController : Controller
 
                 if (user != null)
                 {
-                    Result = await userManager.RemoveFromRoleAsync(user, model.NameRole);
+                    Result = await userManager.RemoveFromRoleAsync(user, role.Name);
 
                     if (!Result.Succeeded)
                         Errors(Result);
