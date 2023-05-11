@@ -49,8 +49,6 @@ public class AdminRolerController : Controller
         List<IdentityUser> membros = new List<IdentityUser>();
         List<IdentityUser> semMembros = new List<IdentityUser>();
        
-        //List<IdentityUser> list = new List<IdentityUser>();
-
         if(role != null)
         {
             foreach (IdentityUser user in userManager.Users.ToList())

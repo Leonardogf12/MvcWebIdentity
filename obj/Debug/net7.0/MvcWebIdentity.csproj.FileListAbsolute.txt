@@ -282,3 +282,9 @@ D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\refint\MvcWebIdentity
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.pdb
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.genruntimeconfig.cache
 D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\ref\MvcWebIdentity.dll
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Microsoft.OpenApi.dll
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\obj\Debug\net7.0\MvcWebIdentity.MvcApplicationPartsAssemblyInfo.cs

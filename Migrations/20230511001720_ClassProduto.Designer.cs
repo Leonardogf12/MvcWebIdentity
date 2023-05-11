@@ -11,8 +11,8 @@ using MvcWebIdentity.Context;
 namespace MvcWebIdentity.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230504002042_ajusteTabelaAspNetUserRole")]
-    partial class ajusteTabelaAspNetUserRole
+    [Migration("20230511001720_ClassProduto")]
+    partial class ClassProduto
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -240,6 +240,23 @@ namespace MvcWebIdentity.Migrations
                     b.HasKey("ALUNOID");
 
                     b.ToTable("Alunos");
+                });
+
+            modelBuilder.Entity("MvcWebIdentity.Entities.Produto", b =>
+                {
+                    b.Property<int>("ProdutoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("longtext");
+
+                    b.Property<decimal>("Preco")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.HasKey("ProdutoId");
+
+                    b.ToTable("Produtos");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

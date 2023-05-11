@@ -1,5 +1,5 @@
 is_global = true
-build_property.TargetFramework = net7.0
+build_property.TargetFramework = net6.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
@@ -10,7 +10,7 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MvcWebIdentity
 build_property.RootNamespace = MvcWebIdentity
 build_property.ProjectDir = D:\PROJETOS\MvcWebIdentity\MvcWebIdentity\
-build_property.RazorLangVersion = 7.0
+build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = D:\PROJETOS\MvcWebIdentity\MvcWebIdentity
@@ -82,26 +82,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/PROJETOS/MvcWebIdentity/MvcWebIdentity/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/PROJETOS/MvcWebIdentity/MvcWebIdentity/Views/Produtos/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b3NcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/PROJETOS/MvcWebIdentity/MvcWebIdentity/Views/Produtos/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b3NcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/PROJETOS/MvcWebIdentity/MvcWebIdentity/Views/Produtos/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b3NcRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/PROJETOS/MvcWebIdentity/MvcWebIdentity/Views/Produtos/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b3NcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/PROJETOS/MvcWebIdentity/MvcWebIdentity/Views/Produtos/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/PROJETOS/MvcWebIdentity/MvcWebIdentity/Views/Shared/Error.cshtml]

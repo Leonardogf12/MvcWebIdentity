@@ -1,14 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MvcWebIdentity.Entities
+namespace MvcWebIdentity.Entities;
+
+public class Produto
 {
-    public class Produto
-    {
-        public int PRODUTOID { get; set; }
+    public int ProdutoId { get; set; }
 
-        [Required, MaxLength(80, ErrorMessage = "Nome não pode exceder 80 caracteres.")]
-        public string? NOME { get; set; }
+    //[Required, MaxLength(80, ErrorMessage = "Nome não pode exceder 80 caracteres.")]
+    public string? Nome { get; set; }
 
-        public decimal PRECO { get; set; }
-    }
+    public decimal Preco { get; set; }
 }
