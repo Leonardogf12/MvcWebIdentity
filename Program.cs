@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MvcWebIdentity.Context;
+using MvcWebIdentity.Policies;
 using MvcWebIdentity.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -37,10 +39,32 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.SlidingExpiration = true;
     });
 
+//*DEFININDO POLITICAS DE AUTORIZACAO DE AUTENTICACAO BASEADO EM CLAIMS
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("IsAdminClaimAccess", 
+        policy => policy.RequireClaim("CadastradoEm"));
+
+    options.AddPolicy("IsAdminClaimAccess",
+       policy => policy.RequireClaim("IsAdmin","true"));
+
+    options.AddPolicy("IsFuncionarioClaimAccess",
+       policy => policy.RequireClaim("IsFuncionario", "true"));
+
+    //*POLITICA PERSONALIZADA QUE DEFINE TEMPO MINIMO DE 3 ANOS PARA TAL ACESSO.
+    options.AddPolicy("TempoCadastroMinimo",
+      policy => policy.Requirements.Add(new TempoCadastroRequirement(3)));
+});
+
 
 //*REGISTRO DO SERVICO DAS ROLES.
-builder.Services.AddScoped<ICriaRegrasUsuario, CriaRegasUsuario>();
+builder.Services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
 
+//*REGISTRO DO SERVICO DAS CLAIMS.
+builder.Services.AddScoped<ISeedUserClaimsInitial, SeedUserClaimsInitial>();
+
+//*REGISTRO DO SERVICO DAS POLICIES PERSONALIZADAS
+builder.Services.AddScoped<IAuthorizationHandler, TempoCadastroHandler>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -61,7 +85,10 @@ app.UseStaticFiles();
 app.UseRouting();
 
 //*APOS O METODO UserRouting() VAMOS INVOCAR O METODO CriarPerfisUsuarioAsync() COM A INSTACIA DE app.
-await CriarPerfisUsuarioAsync(app);
+//await CriarPerfisUsuarioAsync(app);
+
+
+await CriarCalimsUsuarioAsync(app);
 
 
 //*AUTENTICACAO P USO DO IDENTITY.
@@ -89,8 +116,19 @@ async Task CriarPerfisUsuarioAsync(WebApplication app)
 
     using (var scope = scopedFactory.CreateScope())
     {
-        var service = scope.ServiceProvider.GetService<ICriaRegrasUsuario>();
-        await service.CriaRegrasAsync();
-        await service.CriaUsuarioComRegraAsync();
+        var service = scope.ServiceProvider.GetService<ISeedUserRoleInitial>();
+        await service.CriaRoleAsync();
+        await service.CriaUserComRoleAsync();        
+    }
+}
+
+async Task CriarCalimsUsuarioAsync(WebApplication app)
+{
+    var scopedFactory = app.Services.GetService<IServiceScopeFactory>();
+
+    using (var scope = scopedFactory.CreateScope())
+    {
+        var service = scope.ServiceProvider.GetService<ISeedUserClaimsInitial>();
+        await service.SeedUserClaims();
     }
 }

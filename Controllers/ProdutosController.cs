@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Components.Web;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,8 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace MvcWebIdentity.Controllers
 {
+
+    [Authorize]
     public class ProdutosController : Controller
     {
         private readonly AppDbContext _context;
@@ -19,6 +22,7 @@ namespace MvcWebIdentity.Controllers
             _context = appContext;
         }
 
+        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
             return _context.Produtos != null
@@ -26,6 +30,7 @@ namespace MvcWebIdentity.Controllers
                 : Problem("Entity set AppDbContext.Produtos é null.");
         }
 
+        [Authorize(Policy = "TempoCadastroMinimo")] //*politica personalizada.    
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Produtos == null)
@@ -43,11 +48,12 @@ namespace MvcWebIdentity.Controllers
             return View(produto);
         }
 
+        [Authorize(Policy = "TempoCadastroMinimo")] //*politica personalizada.    
         public ActionResult Create()
         {
             return View();
         }
-
+         
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ProdutoId, Nome, Preco")] Produto produto)
@@ -62,6 +68,7 @@ namespace MvcWebIdentity.Controllers
             return View(produto);
         }
 
+        [Authorize(Policy = "IsAdminClaimAccess")] //*politica comum de CLAIM.
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Produtos == null)
@@ -111,6 +118,7 @@ namespace MvcWebIdentity.Controllers
             return View(produto);
         }
 
+        [Authorize(Policy = "TempoCadastroMinimo", Roles = "Admin")] //*politica personalizada com Roles 
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Produtos == null)
@@ -119,7 +127,7 @@ namespace MvcWebIdentity.Controllers
             }
 
             var produto = await _context.Produtos.FirstOrDefaultAsync(x => x.ProdutoId == id);
-            if(produto == null)
+            if (produto == null)
             {
                 return NotFound();
             }

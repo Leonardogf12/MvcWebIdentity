@@ -2,22 +2,20 @@
 
 namespace MvcWebIdentity.Services
 {
-    public class CriaRegasUsuario : ICriaRegrasUsuario
+    public class SeedUserRoleInitial : ISeedUserRoleInitial
     {
 
-
         private readonly UserManager<IdentityUser> _userManager; //*É RESPONSAVEL POR GERENCIAR AS OPERACOES DE CIRACAO, LEITURA, ATUALIZACAO E EXCLUSAO DE USUARIOS.
-        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly RoleManager<IdentityRole> _roleManager; //* ......... DAS ROLES
 
-
-        public CriaRegasUsuario(UserManager<IdentityUser> userManager,
+        public SeedUserRoleInitial(UserManager<IdentityUser> userManager,
             RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _roleManager = roleManager;
         }
 
-        public async Task CriaRegrasAsync()
+        public async Task CriaRoleAsync()
         {
             //*SE O PERFIL QUE ESTOU CRIANDO NAO EXISTE ANTAO FAÇA.
             if (!await _roleManager.RoleExistsAsync("User"))
@@ -55,7 +53,7 @@ namespace MvcWebIdentity.Services
             }
         }
 
-        public async Task CriaUsuarioComRegraAsync()
+        public async Task CriaUserComRoleAsync()
         {
             //*VERIFICA SE O EMAIL DO USUARIO EXISTE.
             if (await _userManager.FindByEmailAsync("usuario@localhost") == null)
